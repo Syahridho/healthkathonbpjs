@@ -1,0 +1,91 @@
+* {
+  font-family: "Barlow", sans-serif;
+}
+
+.header-page {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.vertical-tab .nav-link {
+  font-size: 1rem;
+  color: #333;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 0.75rem;
+  text-align: left;
+  width: 100%;
+}
+
+.vertical-tab .nav-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.wrapper-vertical-tab {
+  display: flex;
+}
+
+.tab-content .card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.btn-active {
+  width: 220px;
+  padding: 15px;
+  border: 1px solid #1d4580;
+  color: #1d4580;
+  background-color: #e6e7f1;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-active {
+  border: 1px solid #1d4580;
+  color: #1d4580;
+  background-color: #e6e7f1;
+}
+
+.btn-no-active {
+  background-color: #ffffff;
+  width: 220px;
+  padding: 15px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eaeaea;
+}
+
+.bg-container {
+  background-color: #f8fafc;
+  padding: 40px 0;
+}
+
+.select2-container .select2-selection--single {
+  height: 80px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  line-height: 40px;
+}
+
+.card-items {
+  background-color: #333;
+  height: 100px;
+}
+
+.img-profile {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
