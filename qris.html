@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Payment</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,8 +21,11 @@
       href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
       <div
@@ -317,11 +320,7 @@
       <div class="container pad-section-bottom pad-section-top">
         <div class="d-flex gap-3 align-items-start wrapper-vertical-tab">
           <div>
-            <button
-              class="btn btn-active h-50 mb-3"
-              data-bs-target="#v-pills-tagihan"
-              data-bs-toggle="pill"
-            >
+            <button class="btn btn-active h-50 mb-3">
               Tagihan
               <img
                 src="https://bpjs-kesehatan.go.id/assets/img/arrow-right.svg"
@@ -330,11 +329,7 @@
                 loading="lazy"
               />
             </button>
-            <button
-              class="btn btn-no-active h-50"
-              data-bs-target="#v-pills-riwayat"
-              data-bs-toggle="pill"
-            >
+            <button class="btn btn-no-active h-50">
               Riwayat
               <img
                 src="https://bpjs-kesehatan.go.id/assets/img/arrow-right.svg"
@@ -347,18 +342,53 @@
 
           <div id="v-pills-tabContent" class="tab-content w-100">
             <div
-              id="v-pills-tagihan"
+              id="v-pills-doku"
               role="tabpanel"
-              aria-labelledby="v-pills-tagihan-tab"
+              aria-labelledby="v-pills-doku-tab"
               tabindex="0"
-              class="tab-pane fade show active"
+              class="tab-pane fade show active ng-star-inserted"
             >
-              <div class="card">
+              <div class="card position-relative">
+                <div
+                  class="position-absolute z-2 bg-secondary opacity-50 w-100 h-100 bg-shadow"
+                ></div>
+                <div
+                  class="position-absolute payment-card card z-3 top-50 start-50 translate-middle p-5"
+                >
+                  <h3>Qris</h3>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p>Bayar sebelum 03 Nov 2023, 18:00</p>
+                    <span
+                      class="text-danger bg-danger-subtle p-1 px-2 rounded-pill"
+                      >00:47:12</span
+                    >
+                  </div>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYnTuOCU2oj4eK0Krlkxq3WTsTgnDJWiJczg&s"
+                    alt=""
+                    class="w-50 mt-3"
+                    style="margin-left: 130px"
+                  />
+
+                  <h5 class="mt-5">Total</h5>
+                  <h5 class="mt-1">Rp.600.000</h5>
+                  <div class="position-relative" style="height: 300px">
+                    <button
+                      class="btn btn-secondary position-absolute bottom-0"
+                      type="button"
+                    >
+                      Cek Status
+                    </button>
+                  </div>
+                </div>
+
                 <div
                   class="w-100 d-flex flex-column justify-content-between"
                   style="height: 800px"
                 >
-                  <div>
+                  <div class="">
                     <h4 class="">Tagihan</h4>
                     <hr />
                     <div class="d-flex flex-column justify-content-between">
@@ -478,229 +508,12 @@
                           QRIS
                         </option>
                         <option data-image="">Virtual Bank</option>
-                        <option data-image="">Virtual Bank BRI</option>
-                        <option data-image="">Virtual Bank Mandiri</option>
-                        <option data-image="">Virtual Bank Jago</option>
-                        <option data-image="">Virtual Bank BCA</option>
-                        <option data-image="">Virtual Bank Kepri</option>
-                        <option data-image="">Virtual Bank BSI</option>
                       </select>
                     </div>
                     <span class="fw-bold pe-4 text-nowrap"
                       >Total : Rp. 600.000</span
                     >
-                    <button
-                      class="btn btn-primary"
-                      onclick="window.location.href='virtualAccount.html'"
-                    >
-                      Bayar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              id="v-pills-riwayat"
-              role="tabpanel"
-              aria-labelledby="v-pills-riwayat-tab"
-              tabindex="0"
-              class="tab-pane fade"
-            >
-              <div class="card">
-                <div class="w-100 d-flex flex-column justify-content-between">
-                  <div>
-                    <h4 class="">Riwayat Pembayaran</h4>
-                    <hr />
-
-                    <div
-                      class="d-flex flex-column gap-2"
-                      id="transactionHistory"
-                    >
-                      <div
-                        class="d-flex align-items-center justify-content-between border-bottom py-2"
-                      >
-                        <div class="d-flex gap-3 align-items-center">
-                          <img
-                            src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg"
-                            alt="profile"
-                            class="img-profile"
-                            style="
-                              width: 50px;
-                              height: 50px;
-                              border-radius: 50%;
-                            "
-                          />
-                          <div>
-                            <h5 class="m-0">Budi Setiawan</h5>
-                            <p class="m-0 fs-6">000128271232</p>
-                          </div>
-                        </div>
-                        <div class="flex-grow-1 text-center">
-                          <p class="text-success">Jumlah: Rp. 150.000</p>
-                          <p class="text-muted">Tanggal: 03/10/2024</p>
-                          <p class="text-success">Status: Berhasil</p>
-                          <!-- Changed to text-danger -->
-                          <p class="text-muted">
-                            Metode Pembayaran:
-                            <img
-                              src="https://cdn.isellercommerce.com/c7c0856769cc490baff2b59b296165c8/theme_content/logo-qris.png?size=320"
-                              alt="Qris"
-                              style="
-                                width: 40px;
-                                height: 40px;
-                                vertical-align: middle;
-                              "
-                            />
-                            Qris
-                          </p>
-                        </div>
-                        <button
-                          onclick="printTransaction('Budi Setiawan', '000128271232', 'Rp. 600.000', '01/10/2024', 'Gagal', 'Alfamart', 'https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg')"
-                          class="btn btn-secondary btn-sm"
-                        >
-                          Cetak
-                        </button>
-                      </div>
-
-                      <div
-                        class="d-flex align-items-center justify-content-between border-bottom py-2"
-                      >
-                        <div class="d-flex gap-3 align-items-center">
-                          <img
-                            src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                            alt="profile"
-                            class="img-profile"
-                            style="
-                              width: 50px;
-                              height: 50px;
-                              border-radius: 50%;
-                            "
-                          />
-                          <div>
-                            <h5 class="m-0">Anisa Salsabila</h5>
-                            <p class="m-0 fs-6">000128292222</p>
-                          </div>
-                        </div>
-                        <div class="flex-grow-1 text-center">
-                          <p class="text-success">Jumlah: Rp. 150.000</p>
-                          <p class="text-muted">Tanggal: 03/10/2024</p>
-                          <p class="text-success">Status: Sukses</p>
-                          <!-- Kept as text-success -->
-                          <p class="text-muted">
-                            Metode Pembayaran:
-                            <img
-                              src="https://cdn.isellercommerce.com/c7c0856769cc490baff2b59b296165c8/theme_content/logo-qris.png?size=320"
-                              alt="Qris"
-                              style="
-                                width: 40px;
-                                height: 40px;
-                                vertical-align: middle;
-                              "
-                            />
-                            Qris
-                          </p>
-                        </div>
-                        <button
-                          onclick="printTransaction('Anisa Salsabila', '000128292222', 'Rp. 300.000', '02/10/2024', 'Sukses', 'Gopay', 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')"
-                          class="btn btn-secondary btn-sm"
-                        >
-                          Cetak
-                        </button>
-                      </div>
-
-                      <div
-                        class="d-flex align-items-center justify-content-between border-bottom py-2"
-                      >
-                        <div class="d-flex gap-3 align-items-center">
-                          <img
-                            src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg"
-                            alt="profile"
-                            class="img-profile"
-                            style="
-                              width: 50px;
-                              height: 50px;
-                              border-radius: 50%;
-                            "
-                          />
-                          <div>
-                            <h5 class="m-0">Asep Syahputra</h5>
-                            <p class="m-0 fs-6">000121829292</p>
-                          </div>
-                        </div>
-                        <div class="flex-grow-1 text-center">
-                          <p class="text-success">Jumlah: Rp. 150.000</p>
-                          <p class="text-muted">Tanggal: 03/10/2024</p>
-                          <p class="text-success">Status: Berhasil</p>
-                          <!-- Changed to text-danger -->
-                          <p class="text-muted">
-                            Metode Pembayaran:
-                            <img
-                              src="https://cdn.isellercommerce.com/c7c0856769cc490baff2b59b296165c8/theme_content/logo-qris.png?size=320"
-                              alt="Qris"
-                              style="
-                                width: 40px;
-                                height: 40px;
-                                vertical-align: middle;
-                              "
-                            />
-                            Qris
-                          </p>
-                        </div>
-                        <button
-                          onclick="printTransaction('Asep Syahputra', '000121829292', 'Rp. 450.000', '03/10/2024', 'Success', 'Dana', 'https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg')"
-                          class="btn btn-secondary btn-sm"
-                        >
-                          Cetak
-                        </button>
-                      </div>
-
-                      <div
-                        class="d-flex align-items-center justify-content-between border-bottom py-2"
-                      >
-                        <div class="d-flex gap-3 align-items-center">
-                          <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwme89cM8YZvHcybGrZl_Obd9U9p5QabozJQ&s"
-                            alt="profile"
-                            class="img-profile"
-                            style="
-                              width: 50px;
-                              height: 50px;
-                              border-radius: 50%;
-                            "
-                          />
-                          <div>
-                            <h5 class="m-0">Putri Martin</h5>
-                            <p class="m-0 fs-6">000124822282</p>
-                          </div>
-                        </div>
-                        <div class="flex-grow-1 text-center">
-                          <p class="text-success">Jumlah: Rp. 150.000</p>
-                          <p class="text-muted">Tanggal: 03/10/2024</p>
-                          <p class="text-success">Status: Sukses</p>
-                          <!-- Kept as text-success -->
-                          <p class="text-muted">
-                            Metode Pembayaraan:
-                            <img
-                              src="https://cdn.isellercommerce.com/c7c0856769cc490baff2b59b296165c8/theme_content/logo-qris.png?size=320"
-                              alt="Qris"
-                              style="
-                                width: 40px;
-                                height: 40px;
-                                vertical-align: middle;
-                              "
-                            />
-                            Qris
-                          </p>
-                        </div>
-                        <button
-                          onclick="printTransaction('Asep Syahputra', '000121829292', 'Rp. 450.000', '03/10/2024', 'Gagal', 'Dana', 'https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg')"
-                          class="btn btn-secondary btn-sm"
-                        >
-                          Cetak
-                        </button>
-                      </div>
-                    </div>
+                    <button class="btn btn-primary">Bayar</button>
                   </div>
                 </div>
               </div>
@@ -718,45 +531,5 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="./script.js"></script>
-    <script>
-      function printTransaction(
-        name,
-        id,
-        amount,
-        date,
-        status,
-        paymentMethod,
-        profileImage
-      ) {
-        const printWindow = window.open("", "_blank", "width=600,height=400");
-        printWindow.document.write(`
-        <html>
-          <head>
-            <title>Cetak Transaksi</title>
-            <style>
-              body { font-family: Arial, sans-serif; }
-              .transaction-details { margin: 20px; }
-              .transaction-details h4 { margin-bottom: 10px; }
-              .transaction-details p { margin: 5px 0; }
-              .profile-img { width: 50px; height: 50px; border-radius: 50%; }
-            </style>
-          </head>
-          <body onload="window.print(); window.close();">
-            <div class="transaction-details">
-              <h4>Detail Transaksi</h4>
-              <img src="${profileImage}" alt="Profile" class="profile-img" />
-              <p><strong>Nama:</strong> ${name}</p>
-              <p><strong>ID:</strong> ${id}</p>
-              <p><strong>Jumlah:</strong> ${amount}</p>
-              <p><strong>Tanggal:</strong> ${date}</p>
-              <p><strong>Status:</strong> ${status}</p>
-              <p><strong>Metode Pembayaran:</strong> ${paymentMethod}</p>
-            </div>
-          </body>
-        </html>
-      `);
-        printWindow.document.close();
-      }
-    </script>
   </body>
 </html>
