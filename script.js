@@ -18,3 +18,15 @@ $(document).ready(function () {
     return $state;
   }
 });
+
+let nomor = document.getElementById('nomor');
+let isi = document.getElementById('isi');
+
+
+nomor.addEventListener("change", function() {
+  if (nomor.value === "nik") {
+    isi.innerHTML = "NIK"
+  } else {
+    isi.innerHTML = "NO BPJS"
+  }
+})

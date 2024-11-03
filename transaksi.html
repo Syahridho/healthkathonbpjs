@@ -347,32 +347,135 @@
               <div class="card">
                 <div
                   class="w-100 d-flex flex-column justify-content-between"
+                  style="height: 800px"
                 >
                   <div>
-                    <h4 class="">Login</h4>
+                    <h4 class="">Tagihan</h4>
                     <hr />
-                    <div class="card d-flex align-items-center justify-content-between">
-                      <div class="d-flex align-items-center w-100 justify-content-center">
-                        <form class="w-50">
-                          <div class="mb-3">
-                            <label for="dropdownMenuButton" class="form-label">Select Option</label>
-                            <select name="nomor" id="nomor" class="form-label btn border dropdown-toggle w-100">
-                              <option value="nik">NIK</option>
-                              <option value="bpjs">BPJS</option>
-                              </select>
+                    <div class="d-flex flex-column justify-content-between">
+                      <div class="d-flex flex-column gap-2">
+                        <div
+                          class="card d-flex flex-row align-items-center justify-content-between"
+                        >
+                          <div class="d-flex gap-3 align-items-center">
+                            <img
+                              src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg"
+                              alt="profile"
+                              class="img-profile"
+                            />
+                            <div>
+                              <h5 class="m-0">Budi Setiawan</h5>
+                              <p class="m-0 fs-6">000128271232</p>
+                            </div>
+                            <p class="text-primary">kelas 1</p>
                           </div>
-                          <div class="mb-3">
-                            <label for="exampleInputEmail1" id="isi" class="form-label">NIK</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <p class="text-danger">Belum Dibayar</p>
+                        </div>
+                        <div
+                          class="card d-flex flex-row align-items-center justify-content-between"
+                        >
+                          <div class="d-flex gap-3 align-items-center">
+                            <img
+                              src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                              alt="profile"
+                              class="img-profile"
+                            />
+                            <div>
+                              <h5 class="m-0">Anisa Salsabila</h5>
+                              <p class="m-0 fs-6">000128292222</p>
+                            </div>
+                            <p class="text-primary">kelas 1</p>
                           </div>
-                          <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                          <p class="text-danger">Belum Dibayar</p>
+                        </div>
+                        <div
+                          class="card d-flex flex-row align-items-center justify-content-between"
+                        >
+                          <div class="d-flex gap-3 align-items-center">
+                            <img
+                              src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg"
+                              alt="profile"
+                              class="img-profile"
+                            />
+                            <div>
+                              <h5 class="m-0">Asep Syahputra</h5>
+                              <p class="m-0 fs-6">000121829292</p>
+                            </div>
+                            <p class="text-primary">kelas 1</p>
                           </div>
-                          <button type="submit" class="btn btn-primary">Masuk</button>
-                        </form>
+                          <p class="text-danger">Belum Dibayar</p>
+                        </div>
+                        <div
+                          class="card d-flex flex-row align-items-center justify-content-between"
+                        >
+                          <div class="d-flex gap-3 align-items-center">
+                            <img
+                              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwme89cM8YZvHcybGrZl_Obd9U9p5QabozJQ&s"
+                              alt="profile"
+                              class="img-profile"
+                            />
+                            <div>
+                              <h5 class="m-0">Putri Martin</h5>
+                              <p class="m-0 fs-6">000127651232</p>
+                            </div>
+                            <p class="text-primary">kelas 1</p>
+                          </div>
+                          <p class="text-danger">Belum Dibayar</p>
+                        </div>
                       </div>
-                    </div>                                        
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-between mt-4 border-top pt-4"
+                  >
+                    <hr />
+                    <div class="d-flex gap-4 w-75">
+                      <label for="metode">Metode Pembayaran</label>
+
+                      <select
+                        id="imageSelect"
+                        name="metode"
+                        class="form-select form-item w-50"
+                      >
+                        <option
+                          data-image="https://alfamart.co.id/frontend/img/brand/logo_alfamart_transparent.png"
+                        >
+                          Alfamart
+                        </option>
+                        <option
+                          data-image="https://www.indomaret.co.id/Assets/image/logo.png"
+                        >
+                          Indomaret
+                        </option>
+                        <option
+                          data-image="https://gopay.co.id/assets/img/logo/gopay.webp"
+                        >
+                          Gopay
+                        </option>
+                        <option
+                          data-image="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/512px-Logo_dana_blue.svg.png"
+                        >
+                          Dana
+                        </option>
+                        <option
+                          data-image="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_purple.svg/512px-Logo_ovo_purple.svg.png"
+                        >
+                          OVO
+                        </option>
+                        <option
+                          data-image="https://cdn.isellercommerce.com/c7c0856769cc490baff2b59b296165c8/theme_content/logo-qris.png?size=320"
+                        >
+                          QRIS
+                        </option>
+                        <option data-image="">Virtual Bank</option>
+                      </select>
+                    </div>
+                    <span class="fw-bold pe-4 text-nowrap"
+                      >Total : Rp. 600.000</span
+                    >
+                    <button class="btn btn-primary">Bayar</button>
+                  </div>
                 </div>
               </div>
             </div>
