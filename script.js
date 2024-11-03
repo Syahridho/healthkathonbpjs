@@ -17,7 +17,28 @@ $(document).ready(function () {
     );
     return $state;
   }
+
+    // Tab switching functionality
+    $('.btn-active, .btn-no-active').click(function () {
+      // Remove active class from all buttons
+      $('.btn-active, .btn-no-active').removeClass('btn-active').addClass('btn-no-active');
+      
+      // Add active class to the clicked button
+      $(this).removeClass('btn-no-active').addClass('btn-active');
+  
+      // Hide all tab contents
+      $('.tab-pane').removeClass('show active');
+  
+      // Show the relevant tab content based on which button was clicked
+      if ($(this).text().trim() === 'Tagihan') {
+        $('#v-pills-tagihan').addClass('show active');
+      } else if ($(this).text().trim() === 'Riwayat') {
+        $('#v-pills-riwayat').addClass('show active');
+      }
+    });
+  
 });
+
 
 let nomor = document.getElementById('nomor');
 let isi = document.getElementById('isi');

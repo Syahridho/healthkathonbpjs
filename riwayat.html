@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
+      <a href="/" class="navbar-brand">
+        <img src="https://bpjs-kesehatan.go.id/assets/img/logo/logo-color.svg" alt="" height="35" />
+      </a>
+      <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler collapsed">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarSupportedContent" class="navbar-collapse collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="#/profil">Profil</a>
+          </li>
+          <li class="nav-item dropdown mx-1">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Jaminan Kesehatan
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#/jaminan-kesehatan-peserta">Peserta</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#/jaminan-kesehatan-manfaat">Manfaat</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#/jaminan-kesehatan-iuran">Iuran</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#/jaminan-kesehatan-prosedur-pendaftaran">Prosedur Pendaftaran</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown mx-1">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Layanan
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#/layanan-alamat-bpjs-kesehatan">Alamat BPJS Kesehatan</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#/layanan-autodebit">Layanan Autodebit</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#/layanan-program-rehab">Program Rehab</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#/layanan-program-pesiar">Program Pesiar</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown mx-1">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Informasi Publik
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#/informasi-publik-diumumkan-secara-berkala">Diumumkan Secara Berkala</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#/informasi-publik-tersedia-setiap-saat">Tersedia Setiap Saat</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#/informasi-publik-diumumkan-serta-merta">Diumumkan Serta Merta</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#/informasi-publik-yang-dikecualikan">Yang Dikecualikan</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#/informasi-publik-good-governance">Good Governance</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown mx-1">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Berita
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#/news">Jamkesnews</a></li>
+              <li>
+                <a class="dropdown-item" href="#/media">Video dan Foto</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown mx-1">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tautan
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a target="_blank" class="dropdown-item" href="https://e-ppid.bpjs-kesehatan.go.id/eppid">e-PPID</a>
+              </li>
+              <li>
+                <a target="_blank" class="dropdown-item"
+                  href="https://elhkpn.kpk.go.id/portal/user/pengumuman_lhkpn/UkVKRVdFOXdSVXhRUjFOWU1TOVNlVmhpU1VGeFYzb3ZibXAxVG1JMmJVaElWbXBTWm5KUVEycGhkR1UzWVhoYVZIWkVVM0J5VjJoclIwNTZWM1paWnc9PQ==">e-LHKPN</a>
+              </li>
+              <li>
+                <a target="_blank" class="dropdown-item"
+                  href="https://new-edabu.bpjs-kesehatan.go.id/registrasibadanusaha/">e-DABU</a>
+              </li>
+              <li>
+                <a target="_blank" class="dropdown-item"
+                  href="https://faskes.bpjs-kesehatan.go.id/aplicares/#/app/peta">Layanan Fasilitas Kesehatan</a>
+              </li>
+              <li>
+                <a target="_blank" class="dropdown-item" href="http://hfis.bpjs-kesehatan.go.id/hfis">Layanan
+                  Pendaftaran Faskes</a>
+              </li>
+              <li>
+                <a target="_blank" class="dropdown-item"
+                  href="http://hfis.bpjs-kesehatan.go.id/hfis/MonitoringPendaftaran/dataFaskesTerdaftar">Layanan Monitor
+                  Pendaftaran Faskes</a>
+              </li>
+              <li>
+                <a target="_blank" class="dropdown-item" href="https://bpjs-kesehatan.go.id/user-manual-mobile-jkn">User
+                  Manual Mobile JKN</a>
+              </li>
+              <li>
+                <a target="_blank" class="dropdown-item" href="https://forms.gle/dfjfEcXcB5CwKjPn9">Skrining Kesehatan
+                  Mental</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="#/kontak">Kontak</a>
+          </li>
+        </ul>
+        <form novalidate role="search" class="d-flex">
+          <input name="keyword" id="search" type="search" aria-label="Search" class="form-control me-2"
+            placeholder="Cari" />
+          <div class="btn-group pos-relative">
+            <button role="button" aria-expanded="false" class="btn btn-primary dropdown-toggle"
+              data-bs-toggle="dropdown" aria-haspopup="true">
+              ID <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="javascript:void(0)">Bahasa</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="javascript:void(0)">English</a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="header-page d-flex align-items-center" style="
+        background-image: url('https://webbpjs-staging.azurewebsites.net/uploads/medias/28082024141816-d9901b6d-5cf0-4e0f-8b6c-f70c5dc4f51e.png');
+      ">
+    <div class="container">
+      <h1 class="fs-1">Layanan Pembayaraan</h1>
+      <span class="breadcrum fw-bold"><a href="/" class="text-decoration-none">Beranda</a> /
+        <a href="#" class="text-decoration-none">Layanan</a> / Pembayaraan
+      </span>
+    </div>
+  </div>
+  <div class="bg-container">
+    <div class="container pad-section-bottom pad-section-top">
+      <div class="d-flex gap-3 align-items-start wrapper-vertical-tab">
+        <div>
+
+          <button class="btn btn-active h-50 mb-3" data-bs-target="#v-pills-tagihan" data-bs-toggle="pill">
+            Tagihan
+            <img src="https://bpjs-kesehatan.go.id/assets/img/arrow-right.svg" alt="" class="img-fluid"
+              loading="lazy" />
+          </button>
+          <button class="btn btn-no-active h-50" data-bs-target="#v-pills-riwayat" data-bs-toggle="pill">
+            Riwayat
+            <img src="https://bpjs-kesehatan.go.id/assets/img/arrow-right.svg" alt="" class="img-fluid"
+              loading="lazy" />
+          </button>
+
+        </div>
+
+        <div id="v-pills-tabContent" class="tab-content w-100">
+
+          <div id="v-pills-tagihan" role="tabpanel" aria-labelledby="v-pills-tagihan-tab" tabindex="0"
+            class="tab-pane fade show active">
+
+            <div class="card">
+              <div class="w-100 d-flex flex-column justify-content-between" style="height: 800px">
+                <div>
+                  <h4 class="">Tagihan</h4>
+                  <hr />
+                  <div class="d-flex flex-column justify-content-between">
+                    <div class="d-flex flex-column gap-2">
+                      <div class="card d-flex flex-row align-items-center justify-content-between">
+                        <div class="d-flex gap-3 align-items-center">
+                          <img src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg"
+                            alt="profile" class="img-profile" />
+                          <div>
+                            <h5 class="m-0">Budi Setiawan</h5>
+                            <p class="m-0 fs-6">000128271232</p>
+                          </div>
+                          <p class="text-primary">kelas 1</p>
+                        </div>
+                        <p class="text-danger">Belum Dibayar</p>
+                      </div>
+                      <div class="card d-flex flex-row align-items-center justify-content-between">
+                        <div class="d-flex gap-3 align-items-center">
+                          <img
+                            src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                            alt="profile" class="img-profile" />
+                          <div>
+                            <h5 class="m-0">Anisa Salsabila</h5>
+                            <p class="m-0 fs-6">000128292222</p>
+                          </div>
+                          <p class="text-primary">kelas 1</p>
+                        </div>
+                        <p class="text-danger">Belum Dibayar</p>
+                      </div>
+                      <div class="card d-flex flex-row align-items-center justify-content-between">
+                        <div class="d-flex gap-3 align-items-center">
+                          <img
+                            src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg"
+                            alt="profile" class="img-profile" />
+                          <div>
+                            <h5 class="m-0">Asep Syahputra</h5>
+                            <p class="m-0 fs-6">000121829292</p>
+                          </div>
+                          <p class="text-primary">kelas 1</p>
+                        </div>
+                        <p class="text-danger">Belum Dibayar</p>
+                      </div>
+                      <div class="card d-flex flex-row align-items-center justify-content-between">
+                        <div class="d-flex gap-3 align-items-center">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwme89cM8YZvHcybGrZl_Obd9U9p5QabozJQ&s"
+                            alt="profile" class="img-profile" />
+                          <div>
+                            <h5 class="m-0">Putri Martin</h5>
+                            <p class="m-0 fs-6">000127651232</p>
+                          </div>
+                          <p class="text-primary">kelas 1</p>
+                        </div>
+                        <p class="text-danger">Belum Dibayar</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between mt-4 border-top pt-4">
+                  <hr />
+                  <div class="d-flex gap-4 w-75">
+                    <label for="metode">Metode Pembayaran</label>
+
+                    <select id="imageSelect" name="metode" class="form-select form-item w-50">
+                      <option data-image="https://alfamart.co.id/frontend/img/brand/logo_alfamart_transparent.png">
+                        Alfamart
+                      </option>
+                      <option data-image="https://www.indomaret.co.id/Assets/image/logo.png">
+                        Indomaret
+                      </option>
+                      <option data-image="https://gopay.co.id/assets/img/logo/gopay.webp">
+                        Gopay
+                      </option>
+                      <option
+                        data-image="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/512px-Logo_dana_blue.svg.png">
+                        Dana
+                      </option>
+                      <option
+                        data-image="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_purple.svg/512px-Logo_ovo_purple.svg.png">
+                        OVO
+                      </option>
+                      <option
+                        data-image="https://cdn.isellercommerce.com/c7c0856769cc490baff2b59b296165c8/theme_content/logo-qris.png?size=320">
+                        QRIS
+                      </option>
+                      <option data-image="">Virtual Bank</option>
+                    </select>
+                  </div>
+                  <span class="fw-bold pe-4 text-nowrap">Total : Rp. 600.000</span>
+                  <button class="btn btn-primary">Bayar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="v-pills-riwayat" role="tabpanel" aria-labelledby="v-pills-riwayat-tab" tabindex="0"
+            class="tab-pane fade">
+            <div class="card">
+              <div class="w-100 d-flex flex-column justify-content-between">
+                <div>
+                  <h4 class="">Riwayat Pembayaran</h4>
+                  <hr />
+
+                  <div class="d-flex flex-column gap-2" id="transactionHistory">
+                    <div class="d-flex align-items-center justify-content-between border-bottom py-2">
+                      <div class="d-flex gap-3 align-items-center">
+                        <img src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg"
+                          alt="profile" class="img-profile" style="width: 50px; height: 50px; border-radius: 50%;" />
+                        <div>
+                          <h5 class="m-0">Budi Setiawan</h5>
+                          <p class="m-0 fs-6">000128271232</p>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1 text-center">
+                        <p class="text-success">Jumlah: Rp. 600.000</p>
+                        <p class="text-muted">Tanggal: 01/10/2024</p>
+                        <p class="text-danger">Status: Gagal</p> <!-- Changed to text-danger -->
+                        <p class="text-muted">
+                          Metode Pembayaran:
+                          <img src="https://alfamart.co.id/frontend/img/brand/logo_alfamart_transparent.png"
+                            alt="Alfamart" style="width: 20px; height: 20px; vertical-align: middle;" /> Alfamart
+                        </p>
+                      </div>
+                      <button
+                        onclick="printTransaction('Budi Setiawan', '000128271232', 'Rp. 600.000', '01/10/2024', 'Gagal', 'Alfamart', 'https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg')"
+                        class="btn btn-secondary btn-sm">Cetak</button>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between border-bottom py-2">
+                      <div class="d-flex gap-3 align-items-center">
+                        <img
+                          src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                          alt="profile" class="img-profile" style="width: 50px; height: 50px; border-radius: 50%;" />
+                        <div>
+                          <h5 class="m-0">Anisa Salsabila</h5>
+                          <p class="m-0 fs-6">000128292222</p>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1 text-center">
+                        <p class="text-success">Jumlah: Rp. 300.000</p>
+                        <p class="text-muted">Tanggal: 02/10/2024</p>
+                        <p class="text-success">Status: Sukses</p> <!-- Kept as text-success -->
+                        <p class="text-muted">
+                          Metode Pembayaran:
+                          <img src="https://gopay.co.id/assets/img/logo/gopay.webp" alt="Gopay"
+                            style="width: 20px; height: 20px; vertical-align: middle;" /> Gopay
+                        </p>
+                      </div>
+                      <button
+                        onclick="printTransaction('Anisa Salsabila', '000128292222', 'Rp. 300.000', '02/10/2024', 'Sukses', 'Gopay', 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')"
+                        class="btn btn-secondary btn-sm">Cetak</button>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between border-bottom py-2">
+                      <div class="d-flex gap-3 align-items-center">
+                        <img
+                          src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg"
+                          alt="profile" class="img-profile" style="width: 50px; height: 50px; border-radius: 50%;" />
+                        <div>
+                          <h5 class="m-0">Asep Syahputra</h5>
+                          <p class="m-0 fs-6">000121829292</p>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1 text-center">
+                        <p class="text-success">Jumlah: Rp. 450.000</p>
+                        <p class="text-muted">Tanggal: 03/10/2024</p>
+                        <p class="text-danger">Status: Gagal</p> <!-- Changed to text-danger -->
+                        <p class="text-muted">
+                          Metode Pembayaran:
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/512px-Logo_dana_blue.svg.png"
+                            alt="Dana" style="width: 20px; height: 20px; vertical-align: middle;" /> Dana
+                        </p>
+                      </div>
+                      <button
+                        onclick="printTransaction('Asep Syahputra', '000121829292', 'Rp. 450.000', '03/10/2024', 'Gagal', 'Dana', 'https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg')"
+                        class="btn btn-secondary btn-sm">Cetak</button>
+                    </div>
+
+
+                    <div class="d-flex align-items-center justify-content-between border-bottom py-2">
+                      <div class="d-flex gap-3 align-items-center">
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwme89cM8YZvHcybGrZl_Obd9U9p5QabozJQ&s"
+                          alt="profile" class="img-profile" style="width: 50px; height: 50px; border-radius: 50%;" />
+                        <div>
+                          <h5 class="m-0">Mulyono Bakti</h5>
+                          <p class="m-0 fs-6">000124822282</p>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1 text-center">
+                        <p class="text-success">Jumlah: Rp. 700.000</p>
+                        <p class="text-muted">Tanggal: 04/10/2024</p>
+                        <p class="text-success">Status: Sukses</p> <!-- Kept as text-success -->
+                        <p class="text-muted">
+                          Metode Pembayaran:
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_purple.svg/512px-Logo_ovo_purple.svg.png"
+                            alt="OVO" style="width: 20px; height: 20px; vertical-align: middle;" /> OVO
+                        </p>
+                      </div>
+                      <button
+                        onclick="printTransaction('Asep Syahputra', '000121829292', 'Rp. 450.000', '03/10/2024', 'Gagal', 'Dana', 'https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg')"
+                        class="btn btn-secondary btn-sm">Cetak</button>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    function printTransaction(name, id, amount, date, status, paymentMethod, profileImage) {
+      const printWindow = window.open('', '_blank', 'width=600,height=400');
+      printWindow.document.write(`
+        <html>
+          <head>
+            <title>Cetak Transaksi</title>
+            <style>
+              body { font-family: Arial, sans-serif; }
+              .transaction-details { margin: 20px; }
+              .transaction-details h4 { margin-bottom: 10px; }
+              .transaction-details p { margin: 5px 0; }
+              .profile-img { width: 50px; height: 50px; border-radius: 50%; }
+            </style>
+          </head>
+          <body onload="window.print(); window.close();">
+            <div class="transaction-details">
+              <h4>Detail Transaksi</h4>
+              <img src="${profileImage}" alt="Profile" class="profile-img" />
+              <p><strong>Nama:</strong> ${name}</p>
+              <p><strong>ID:</strong> ${id}</p>
+              <p><strong>Jumlah:</strong> ${amount}</p>
+              <p><strong>Tanggal:</strong> ${date}</p>
+              <p><strong>Status:</strong> ${status}</p>
+              <p><strong>Metode Pembayaran:</strong> ${paymentMethod}</p>
+            </div>
+          </body>
+        </html>
+      `);
+      printWindow.document.close();
+    }
+  </script>
+
+
+</body>
+
+</html>
