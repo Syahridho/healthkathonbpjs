@@ -10,7 +10,7 @@ Sistem pembayaran online untuk program JKN (Jaminan Kesehatan Nasional) melalui 
 [Link Demo Aplikasi](https://healthkathonbpjs.vercel.app/).
 https://healthkathonbpjs.vercel.app/
 
-[Link Presentasi ppt](https://docs.google.com/presentation/d/1SSLRzTlTQNoxf8xH3BtN7eeSFeGSRAbM/edit?usp=sharing&ouid=114786318036856399055&rtpof=true&sd=true)
+[Link Presentasi ppt](https://docs.google.com/presentation/d/1xw4UeZkh6POfwgvDnevPd1NOY8-qZmcp/edit?usp=sharing&ouid=114786318036856399055&rtpof=true&sd=true)
 
 ## 🎯 Latar Belakang
 
